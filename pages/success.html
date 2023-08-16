@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+      .thanks .container{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .thanks-box{
+        background-color: var(--bg-color-2);
+        padding: 5rem 6rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s background-color;
+      }
+      .thanks-box p.text{
+        text-align: center;
+      }
+      @media (max-width: 650px) {
+        .thanks-box{
+          padding: 3rem 4rem;
+        }
+      }
+      @media (max-width: 570px) {
+        .thanks-box{
+          padding: 2rem 2rem;
+        }
+        .thanks-box p.text{
+          font-size: 0.6rem;
+        }
+        .thanks-box .btn{
+          font-size: 0.6rem;
+          padding: 0.8rem 1.4rem;
+        }
+      }
+      @media (max-width: 380px) {
+        .thanks-box{
+          padding: 2rem 1rem;
+        }
+        .thanks-box p.text{
+          font-size: 0.5rem;
+        }
+        .thanks-box .btn{
+          font-size: 0.5rem;
+          padding: 0.8rem 1.2rem;
+        }
+      }
+
+      </style>
+</head>
+<body>
+    <section class="thanks">
+      <div class="container">
+        <div class="thanks-box">
+          <h1 class="heading">Thank You!</h1>
+          <p class="text">
+            Your message has been received. We appreciate your visit! <br>
+            Thank you for taking the time to explore our website. 
+          </p>
+          <a href="/" class="btn">Return to Home</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+    <script>
+      let theme = localStorage.getItem("dark");
+      if(theme == 1){
+        document.body.classList.add("dark");
+      }
+      else{
+        document.body.classList.remove("dark");
+      }
+    </script>
+</body>
+</html>
